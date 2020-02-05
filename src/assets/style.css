@@ -1,0 +1,8 @@
+/* @import '~vux/src/styles/reset.less'; */
+@charset "utf-8";
+/* CSS Document */
+html,body{height: 100%;width: 100%;word-wrap:break-word;}
+*{
+  padding:0;
+  margin:0;
+}
