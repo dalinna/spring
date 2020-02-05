@@ -80,7 +80,7 @@ export default {
   methods: {
     getData() {
       const api = 'http://127.0.0.1:8000/getInfo';
-      this.$http.post(api).then((response) => {
+      this.$http.get(api).then((response) => {
         this.formData = JSON.parse(response.data).data;
       });
     },
