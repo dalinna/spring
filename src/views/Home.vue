@@ -80,8 +80,8 @@ export default {
   methods: {
     getData() {
       const api = 'http://www.baidu.com';
-      this.$http.get(api).then((response) => {
-        this.formData = response.data;
+      this.$http.post(api).then((response) => {
+        this.formData = JSON.parse(response.data).data;
       });
     },
     toWrite() {
