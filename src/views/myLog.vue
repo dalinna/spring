@@ -107,8 +107,8 @@ export default {
     },
     sendReq() {
       // console.log('kdkdkk');
-      const api = 'http://www.baidu.com';
-      this.$http.get(api, { params: { data: this.formItem } }).then((response) => {
+      const api = 'http://127.0.0.1:8000/saveInfo';
+      this.$http.post(api, { params: { data: this.formItem } }).then((response) => {
         this.formData = response.data;
       });
     },
