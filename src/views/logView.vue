@@ -37,7 +37,7 @@
       </div>
       <div class="item danger">
         <span>😷外出 </span>
-        <div class="progress" :style="{ width: (formItem.outTime*100/24) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: (formItem.outTime*100/24/60) *(1.3)+ 'px' }"></div>
         <div>{{((formItem.outTime/60)*100/24).toFixed(2)}}%</div>
       </div>
     </div>

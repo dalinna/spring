@@ -46,7 +46,7 @@
         </el-button>
       </el-form-item>
     </el-form>
-    <p class="left">- 剩下的 16 小时 59 分钟，可能都用来思考和吃吃喝喝了 -</p>
+    <p class="left">- 剩下的 {{parseInt(leftTime/60)}} 小时 {{leftTime%60}} 分钟，可能都用来思考和吃吃喝喝了 -</p>
   </div>
 </template>
 
@@ -100,6 +100,15 @@ export default {
         outTime: 0,
       },
     };
+  },
+  computed: {
+    leftTime() {
+      const leftAllTime = (23 * 60 + 59) - ((this.formItem.phoneTime
+      + this.formItem.studyTime + this.formItem.tvTime
+      + this.formItem.gameTime + this.formItem.sportTime
+      + this.formItem.sleepTime) * 60 + this.formItem.outTime);
+      return (leftAllTime > 0 ? leftAllTime : 0);
+    },
   },
   methods: {
     handleChange() {
