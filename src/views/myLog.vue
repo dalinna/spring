@@ -116,7 +116,7 @@ export default {
     },
     sendReq() {
       // console.log('kdkdkk');
-      const api = 'http://127.0.0.1:8000/saveInfo';
+      const api = 'http://118.31.7.116:8080/saveInfo';
       this.$http.post(api, { params: { data: this.formItem } }).then((response) => {
         this.formData = response.data;
       });
