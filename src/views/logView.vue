@@ -6,37 +6,37 @@
     </div>
     <div class="list">
       <div class="item">
-        <span>😪睡大觉 </span>
+        <span class="title">😪睡大觉 </span>
         <div class="progress" :style="{ width: ((formItem.sleepTime*100)/24) *(1.3)+ 'px' }"></div>
         <div>{{((formItem.sleepTime*100)/24).toFixed(2)}}%</div>
       </div>
       <div class="item">
-        <span>📱刷手机 </span>
+        <span  class="title">📱刷手机 </span>
         <div class="progress" :style="{ width: (formItem.phoneTime*100/24) *(1.3)+ 'px' }"></div>
         <div>{{(formItem.phoneTime*100/24).toFixed(2)}}%</div>
       </div>
       <div class="item">
-        <span>📺看电视 </span>
+        <span  class="title">📺看电视 </span>
         <div class="progress" :style="{ width: (formItem.tvTime*100/24) *(1.3)+ 'px' }"></div>
         <div>{{(formItem.tvTime*100/24).toFixed(2)}}%</div>
       </div>
       <div class="item">
-        <span>📖搞学习 </span>
+        <span  class="title">📖搞学习 </span>
         <div class="progress" :style="{ width: (formItem.studyTime*100/24) *(1.3)+ 'px' }"></div>
         <div>{{(formItem.studyTime*100/24).toFixed(2)}}%</div>
       </div>
-      <div class="item">
+      <!-- <div class="item">
         <span>🎮打游戏 </span>
         <div class="progress" :style="{ width: (formItem.gameTime*100/24) *(1.3)+ 'px' }"></div>
         <div>{{(formItem.gameTime*100/24).toFixed(2)}}%</div>
-      </div>
+      </div> -->
       <div class="item">
-        <span>🧘‍♀️做运动 </span>
+        <span  class="title">🧘‍♀️做运动 </span>
         <div class="progress" :style="{ width: (formItem.sportTime*100/24) *(1.3)+ 'px' }"></div>
         <div>{{(formItem.sportTime*100/24).toFixed(2)}}%</div>
       </div>
       <div class="item danger">
-        <span>😷外出 </span>
+        <span  class="title">😷外出 </span>
         <div class="progress" :style="{ width: (formItem.outTime*100/24/60) *(1.3)+ 'px' }"></div>
         <div>{{((formItem.outTime/60)*100/24).toFixed(2)}}%</div>
       </div>
@@ -125,6 +125,10 @@ export default {
         height: 11px;
         margin: 0 12px;
         background: #17569F
+      }
+      .title{
+        display: inline-block;
+        width: 70px;
       }
     }
     .danger{

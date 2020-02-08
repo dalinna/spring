@@ -19,10 +19,10 @@
           <el-input-number v-model="formItem.tvTime"
           :step="0.5" @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
-        <el-form-item prop="gameTime" label="🎮打游戏" class="form-item form-item-num">
+        <!-- <el-form-item prop="gameTime" label="🎮打游戏" class="form-item form-item-num">
           <el-input-number v-model="formItem.gameTime"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item prop="sportTime" label="🧘‍♀️做运动" class="form-item form-item-num">
           <el-input-number v-model="formItem.sportTime"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
@@ -155,7 +155,11 @@ export default {
 <style lang="less" scoped>
 .my-log {
   padding-top: 30px;
-
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
   /deep/.el-form-item__content {
     line-height: 25px;
   }
@@ -182,6 +186,7 @@ export default {
     background: #17569F;
     border: 1px solid #17569F;
     height: 27px;
+    line-height: 27px;
     color: #fff;
   }
 
