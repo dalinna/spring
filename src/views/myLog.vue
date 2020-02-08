@@ -168,13 +168,6 @@ export default {
     line-height: 25px;
   }
 
-  /deep/.el-input-number--small .el-input-number__decrease {
-    width: 17px;
-  }
-
-  /deep/.el-input-number--small .el-input-number__increase {
-    width: 17px;
-  }
 
   /deep/.ivu-form-item {
     margin-bottom: 0;
@@ -186,21 +179,21 @@ export default {
   }
 
   /deep/.el-input-number--small .el-input__inner {
-    padding: 0 24px;
+    // padding: 0 24px;
     background: #17569F;
-    border: 1px solid #17569F;
-    height: 27px;
-    line-height: 27px;
+    // border: 1px solid #17569F;
+    // height: 27px;
+    // line-height: 27px;
     color: #fff;
-    position: relative;
+    // position: relative;
   }
-  /deep/.el-input-number--small::before{
+  /deep/.el-input-number--small::after{
     content: "";
-    width: 38px;
-    height: 25px;
+    width: 62px;
+    height: 100%;
     position: absolute;
     top: 0;
-    left: 19px;
+    left: 34px;
     z-index: 1;
   }
 
@@ -254,15 +247,15 @@ export default {
     }
 
     /deep/.el-input-number--small {
-      width: 75px;
-      height: 25px;
-      line-height: 25px;
+      // width: 75px;
+      // height: 25px;
+      // line-height: 25px;
     }
   }
 
   .el-form--inline {
     .form-item-num {
-      width: 110px;
+      width: 160px;
       margin-bottom: 30px;
 
       /deep/.el-form-item__label {

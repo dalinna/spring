@@ -13,6 +13,13 @@ Vue.config.productionTip = false;
 Vue.use(Mint);
 Vue.use(ElementUI);
 Vue.prototype.$http = Axios;
+// 根据路由设置标题
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
+  next();
+});
 new Vue({
   router,
   store,
