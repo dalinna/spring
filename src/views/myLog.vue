@@ -96,7 +96,7 @@ export default {
         tvTime: 0,
         gameTime: 0,
         sportTime: 0,
-        sleepTime: 0,
+        sleepTime: 8,
         outTime: 0,
       },
     };
