@@ -7,37 +7,37 @@
     <p class="num">— 截止 {{formData.time}}，已有{{formData.total}}人参与记录 — </p>
     <div class="list">
       <div class="item">
-        <span>😪睡大觉 </span>
+        <span  class="title">😪睡大觉 </span>
         <div class="progress" :style="{ width: formData.sleepTime *(1.3)+ 'px' }"></div>
         <div>{{formData.sleepTime}}%</div>
       </div>
       <div class="item">
-        <span>📱刷手机 </span>
+        <span  class="title">📱刷手机 </span>
         <div class="progress" :style="{ width: formData.phoneTime *(1.3)+ 'px' }"></div>
         <div>{{formData.phoneTime}}%</div>
       </div>
       <div class="item">
-        <span>📺看电视 </span>
+        <span  class="title">📺看电视 </span>
         <div class="progress" :style="{ width: formData.tvTime *(1.3)+ 'px' }"></div>
         <div>{{formData.tvTime}}%</div>
       </div>
       <div class="item">
-        <span>📖搞学习 </span>
+        <span  class="title">📖搞学习 </span>
         <div class="progress" :style="{ width: formData.studyTime *(1.3)+ 'px' }"></div>
         <div>{{formData.studyTime}}%</div>
       </div>
-      <div class="item">
+      <!-- <div class="item">
         <span>🎮打游戏 </span>
         <div class="progress" :style="{ width: formData.gameTime *(1.3)+ 'px' }"></div>
         <div>{{formData.gameTime}}%</div>
-      </div>
+      </div> -->
       <div class="item">
-        <span>🧘‍♀️做运动 </span>
+        <span  class="title">🧘‍♀️做运动 </span>
         <div class="progress" :style="{ width: formData.sportTime *(1.3)+ 'px' }"></div>
         <div>{{formData.sportTime}}%</div>
       </div>
       <div class="item danger">
-        <span>😷外出 </span>
+        <span  class="title">😷外出 </span>
         <div class="progress" :style="{ width: formData.outTime*(1.3)+ 'px' }"></div>
         <div>{{formData.outTime}}%</div>
       </div>
@@ -128,6 +128,11 @@ export default {
         height: 11px;
         margin: 0 12px;
         background: #17569F
+      }
+      .title{
+        display: inline-block;
+        width: 70px;
+        text-align: left;
       }
     }
     .danger{

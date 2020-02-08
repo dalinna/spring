@@ -23,19 +23,20 @@
           <el-input-number v-model="formItem.gameTime"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item> -->
-        <el-form-item prop="sportTime" label="🧘‍♀️做运动" class="form-item form-item-num">
-          <el-input-number v-model="formItem.sportTime"
+        <el-form-item prop="sportTime" :step="0.5" label="🧘‍♀️做运动" class="form-item form-item-num">
+          <el-input-number v-model="formItem.sportTime" :step="0.5"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <el-form-item prop="studyTime" label="📖搞学习" class="form-item form-item-num">
-          <el-input-number v-model="formItem.studyTime"
+          <el-input-number v-model="formItem.studyTime" :step="0.5"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <el-form-item prop="sleepTime" label="😪睡大觉" class="form-item form-item-num">
-          <el-input-number v-model="formItem.sleepTime"
+          <el-input-number v-model="formItem.sleepTime" :step="0.5"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
-        <el-form-item prop="outTime" label="😷外出" class="form-item form-item-num go-out">
+        <el-form-item prop="outTime" label="😷外出"
+        class="form-item form-item-num go-out">
           <el-input-number v-model="formItem.outTime"
           @change="handleChange" :min="0" size="small" :max="999" /> <span>分钟</span>
         </el-form-item>
