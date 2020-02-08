@@ -2,43 +2,40 @@
   <div class="home">
     <div class="top">
       <p class="title">这个春节，全国人民积极响应号召👍</p>
-      <p class="title">春节10天假期分别用于</p>
+      <p class="title">假期的时间分配🕛</p>
     </div>
-    <p class="num">— 截止 {{formData.time}}，已有{{formData.total}}人参与记录 — </p>
+    <p class="num">
+      — 截止 <span class="bold-font">{{formData.time}}</span>，
+      已有 <span class="bold-font">{{formData.total}}</span> 人参与记录 — </p>
     <div class="list">
       <div class="item">
         <span  class="title">😪睡大觉 </span>
-        <div class="progress" :style="{ width: formData.sleepTime *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: formData.sleepTime/2+0.5+ 'vw' }"></div>
         <div>{{formData.sleepTime}}%</div>
       </div>
       <div class="item">
         <span  class="title">📱刷手机 </span>
-        <div class="progress" :style="{ width: formData.phoneTime *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: formData.phoneTime/2+0.5+ 'vw' }"></div>
         <div>{{formData.phoneTime}}%</div>
       </div>
       <div class="item">
         <span  class="title">📺看电视 </span>
-        <div class="progress" :style="{ width: formData.tvTime *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: formData.tvTime/2+ 0.5 + 'vw' }"></div>
         <div>{{formData.tvTime}}%</div>
       </div>
       <div class="item">
         <span  class="title">📖搞学习 </span>
-        <div class="progress" :style="{ width: formData.studyTime *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: formData.studyTime/2+0.5+ 'vw' }"></div>
         <div>{{formData.studyTime}}%</div>
       </div>
-      <!-- <div class="item">
-        <span>🎮打游戏 </span>
-        <div class="progress" :style="{ width: formData.gameTime *(1.3)+ 'px' }"></div>
-        <div>{{formData.gameTime}}%</div>
-      </div> -->
       <div class="item">
         <span  class="title">🧘‍♀️做运动 </span>
-        <div class="progress" :style="{ width: formData.sportTime *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: formData.sportTime/2+0.5+ 'vw' }"></div>
         <div>{{formData.sportTime}}%</div>
       </div>
       <div class="item danger">
         <span  class="title">😷外出 </span>
-        <div class="progress" :style="{ width: formData.outTime*(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: formData.outTime/2+0.5+ 'vw' }"></div>
         <div>{{formData.outTime}}%</div>
       </div>
     </div>
@@ -112,6 +109,9 @@ export default {
     font-size: 12px;
     font-family: PingFangSC-Regular;
     margin-bottom: 30px;
+    .bold-font{
+      font-weight: bold;
+    }
   }
 
   ;
@@ -139,6 +139,9 @@ export default {
       color: #FF5F7A;
       .progress{
         background: #FF5F7A;
+      }
+      .title{
+        color: #FF5F7A;
       }
     }
   }

@@ -1,28 +1,28 @@
 <template>
   <div class="log-view">
     <div class="top">
-      <p class="title">来自🏠{{formItem.city}}的{{formItem.name}}</p>
-      <p class="title">积极响应号召，春节10天假期分别用于：</p>
+      <p class="title">来自🏠{{formItem.city}} 的{{formItem.name}} </p>
+      <p class="title">假期的时间分配</p>
     </div>
     <div class="list">
       <div class="item">
         <span class="title">😪睡大觉 </span>
-        <div class="progress" :style="{ width: ((formItem.sleepTime*100)/24) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: ((formItem.sleepTime*100)/24)/2+ 0.5 + 'vw' }"></div>
         <div>{{((formItem.sleepTime*100)/24).toFixed(2)}}%</div>
       </div>
       <div class="item">
         <span  class="title">📱刷手机 </span>
-        <div class="progress" :style="{ width: (formItem.phoneTime*100/24) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: (formItem.phoneTime*100/24)/2+ 0.5 + 'vw'  }"></div>
         <div>{{(formItem.phoneTime*100/24).toFixed(2)}}%</div>
       </div>
       <div class="item">
         <span  class="title">📺看电视 </span>
-        <div class="progress" :style="{ width: (formItem.tvTime*100/24) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: (formItem.tvTime*100/24) /2+ 0.5 + 'vw' }"></div>
         <div>{{(formItem.tvTime*100/24).toFixed(2)}}%</div>
       </div>
       <div class="item">
         <span  class="title">📖搞学习 </span>
-        <div class="progress" :style="{ width: (formItem.studyTime*100/24) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: (formItem.studyTime*100/24)/2+ 0.5 + 'vw'  }"></div>
         <div>{{(formItem.studyTime*100/24).toFixed(2)}}%</div>
       </div>
       <!-- <div class="item">
@@ -32,12 +32,12 @@
       </div> -->
       <div class="item">
         <span  class="title">🧘‍♀️做运动 </span>
-        <div class="progress" :style="{ width: (formItem.sportTime*100/24) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: (formItem.sportTime*100/24)/2+ 0.5 + 'vw'  }"></div>
         <div>{{(formItem.sportTime*100/24).toFixed(2)}}%</div>
       </div>
       <div class="item danger">
         <span  class="title">😷外出 </span>
-        <div class="progress" :style="{ width: (formItem.outTime*100/24/60) *(1.3)+ 'px' }"></div>
+        <div class="progress" :style="{ width: (formItem.outTime*100/24/60)/2+ 0.5 + 'vw'  }"></div>
         <div>{{((formItem.outTime/60)*100/24).toFixed(2)}}%</div>
       </div>
     </div>
@@ -46,7 +46,7 @@
     </div>
     <div class="tip-btm">
       <p>特此纪念 2020 这个难忘的春节。</p>
-      <p>战役未结束，别放松警惕，我们会胜利！</p>
+      <p>战役未止，别放松警惕，我们会胜利！</p>
     </div>
     <div class="btm">
       <img class="qrcode-img" src="../assets/img/log_view_qrcode.png" alt="">
@@ -99,6 +99,9 @@ export default {
 
   .top {
     margin-bottom: 30px;
+    .title{
+      text-align: center;
+    }
   }
 
   .title {
@@ -135,6 +138,9 @@ export default {
       color: #FF5F7A;
       .progress{
         background: #FF5F7A;
+      }
+      .title{
+        color: #FF5F7A;
       }
     }
   }

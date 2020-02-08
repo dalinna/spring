@@ -9,7 +9,7 @@
       <el-form-item prop="name" label="的" class="form-item form-item-name">
         <el-input type="text" v-model="formItem.name" class="city" placeholder="填写你的昵称" />
       </el-form-item>
-      <div class="tip">积极响应号召，每天的<span class="bold-span">24小时</span>分别用于：</div>
+      <div class="tip">积极响应号召，每天<span class="bold-span">24小时</span>分配如下：</div>
       <div class="box">
         <el-form-item prop="phoneTime" label="📱刷手机" class="form-item form-item-num">
           <el-input-number v-model="formItem.phoneTime" @focus="inputNumberFocus"
@@ -47,7 +47,9 @@
         </el-button>
       </el-form-item>
     </el-form>
-    <p class="left">- 剩下的 {{parseInt(leftTime/60)}} 小时 {{leftTime%60}} 分钟，可能都用来思考和吃吃喝喝了 -</p>
+    <p class="left">- 剩下的
+      <span class="bold-span"> {{parseInt(leftTime/60)}} 小时 {{leftTime%60}} 分钟</span>
+      ，可能都用来思考和吃吃喝喝了 -</p>
   </div>
 </template>
 
@@ -158,12 +160,15 @@ export default {
 
 <style lang="less" scoped>
 .my-log {
-  padding-top: 30px;
+  padding-top: 80px;
   position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  .bold-span{
+    font-weight: bold;
+  }
   /deep/.el-form-item__content {
     line-height: 25px;
   }
