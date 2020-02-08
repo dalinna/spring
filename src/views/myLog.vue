@@ -273,6 +273,7 @@ export default {
       font-family: PingFangSC-Regular;
       font-size: 12px;
       height: 30px;
+      line-height: 30px;
     }
   }
 
