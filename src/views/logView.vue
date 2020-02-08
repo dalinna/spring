@@ -96,7 +96,9 @@ export default {
   font-family: PingFangSC-Semibold;
   font-size: 12px;
   text-align: left;
-
+  .last-tip{
+    text-align: center;
+  }
   .top {
     margin-bottom: 30px;
     .title{
