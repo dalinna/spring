@@ -112,8 +112,8 @@ export default {
     },
   },
   methods: {
-    inputNumberFocus(){
-      preventDefault();
+    inputNumberFocus(event) {
+      event.preventDefault();
     },
     handleChange() {
       // console.log('kdkdkk');
@@ -192,6 +192,16 @@ export default {
     height: 27px;
     line-height: 27px;
     color: #fff;
+    position: relative;
+  }
+  /deep/.el-input-number--small::before{
+    content: "";
+    width: 38px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 19px;
+    z-index: 1;
   }
 
   /deep/.el-input__inner {
