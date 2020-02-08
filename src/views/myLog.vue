@@ -12,11 +12,11 @@
       <div class="tip">积极响应号召，每天的<span class="bold-span">24小时</span>分别用于：</div>
       <div class="box">
         <el-form-item prop="phoneTime" label="📱刷手机" class="form-item form-item-num">
-          <el-input-number v-model="formItem.phoneTime"
+          <el-input-number v-model="formItem.phoneTime" @focus="inputNumberFocus"
           :step="0.5" @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <el-form-item prop="tvTime" label="📺看电视" class="form-item  form-item-num">
-          <el-input-number v-model="formItem.tvTime"
+          <el-input-number v-model="formItem.tvTime" @focus="inputNumberFocus"
           :step="0.5" @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <!-- <el-form-item prop="gameTime" label="🎮打游戏" class="form-item form-item-num">
@@ -24,20 +24,20 @@
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item> -->
         <el-form-item prop="sportTime" :step="0.5" label="🧘‍♀️做运动" class="form-item form-item-num">
-          <el-input-number v-model="formItem.sportTime" :step="0.5"
+          <el-input-number v-model="formItem.sportTime" :step="0.5"  @focus="inputNumberFocus"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <el-form-item prop="studyTime" label="📖搞学习" class="form-item form-item-num">
-          <el-input-number v-model="formItem.studyTime" :step="0.5"
+          <el-input-number v-model="formItem.studyTime" :step="0.5" @focus="inputNumberFocus"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <el-form-item prop="sleepTime" label="😪睡大觉" class="form-item form-item-num">
-          <el-input-number v-model="formItem.sleepTime" :step="0.5"
+          <el-input-number v-model="formItem.sleepTime" :step="0.5" @focus="inputNumberFocus"
           @change="handleChange" :min="0" size="small" :max="24" /> <span>小时</span>
         </el-form-item>
         <el-form-item prop="outTime" label="😷外出"
         class="form-item form-item-num go-out">
-          <el-input-number v-model="formItem.outTime"
+          <el-input-number v-model="formItem.outTime" @focus="inputNumberFocus"
           @change="handleChange" :min="0" size="small" :max="999" /> <span>分钟</span>
         </el-form-item>
       </div>
@@ -112,6 +112,9 @@ export default {
     },
   },
   methods: {
+    inputNumberFocus(){
+      preventDefault();
+    },
     handleChange() {
       // console.log('kdkdkk');
     },
