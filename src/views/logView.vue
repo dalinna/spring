@@ -112,6 +112,20 @@ export default {
 <style lang="less" scoped>
 .log-view-box{
   padding-top: 30px;
+  /deep/.canvas-img{
+    width: 100%;
+  }
+  /deep/.el-dialog__body{
+    padding: 0;
+    position: relative;
+    .save-img-tip{
+      position: absolute;
+      width: 100%;
+      top: -20px;
+      text-align: center;
+      color: #FF5F7A;
+    }
+  }
 }
 .to-img{
   position: fixed;
@@ -129,20 +143,6 @@ export default {
   font-family: PingFangSC-Semibold;
   font-size: 12px;
   text-align: left;
-  /deep/.canvas-img{
-    width: 100%;
-  }
-  /deep/.el-dialog__body{
-    padding: 0;
-    position: relative;
-    .save-img-tip{
-      position: absolute;
-      width: 100%;
-      top: -20px;
-      text-align: center;
-      color: #FF5F7A;
-    }
-  }
   .last-tip{
     text-align: center;
     font-family: PingFangSC;
