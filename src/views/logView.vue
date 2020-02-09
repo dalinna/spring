@@ -1,7 +1,9 @@
 <template>
 <div class='log-view-box'>
   <div class="log-view" id="logView" ref='imageWrapper'>
-    <img src='dataURL'/>
+    <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='0'>
+      <img :src="dataURL" alt="" class="canvas-img">
+    </el-dialog>
     <div class="top" >
       <p class="title">来自🏠{{formItem.city}} 的{{formItem.name}} </p>
       <p class="title">假期的时间分配</p>
@@ -55,7 +57,7 @@
     </div>
     <p class="last-tip">- 上述内容为用户自行填写创建，真实性由其本人负责 -</p>
   </div>
-<div @click="toImg">生成图片</div>
+<div @click="toImg" class="to-img">生成图片</div>
 </div>
 </template>
 
@@ -93,9 +95,8 @@ export default {
     toImg() {
       this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: null }).then((canvas) => {
         const imgUri = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
-        const saveLink = document.createElement('a');
-        saveLink.href = imgUri;
-        saveLink.download = saveLink.click();
+        this.dataURL = imgUri;
+        this.dialogFormVisible = true;
       });
     },
   },
@@ -103,12 +104,25 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.to-img{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #17569F;
+  color: #fff;
+}
 .log-view {
   padding: 30px 30px 60px 30px;
   color: #17569F;
   font-family: PingFangSC-Semibold;
   font-size: 12px;
   text-align: left;
+  /deep/.canvas-img{
+    width: 100%;
+  }
   .last-tip{
     text-align: center;
   }
