@@ -95,7 +95,7 @@ export default {
       this.formItem = Object.assign({}, this.formItem, localStorageData);
     },
     toImg() {
-      this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: '#fff', height: document.getElementById('logView').clientHeight + 20 }).then((canvas) => {
+      this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: '#fff', useCORS: true, height: document.getElementById('logView').clientHeight + 20 }).then((canvas) => {
         const imgUri = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
         this.dataURL = imgUri;
         this.switchClose();
