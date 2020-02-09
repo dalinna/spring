@@ -111,7 +111,6 @@ export default {
 
 <style lang="less" scoped>
 .log-view-box{
-  padding-top: 30px;
   /deep/.canvas-img{
     width: 100%;
   }
