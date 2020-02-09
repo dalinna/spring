@@ -149,7 +149,7 @@ export default {
   }
   .btm{
     padding: 0 32px;
-    margin-top: 25px;
+    margin-top: 50px;
     .btm-img{
       width: 100%;
     }

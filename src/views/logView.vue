@@ -135,13 +135,14 @@ export default {
     .save-img-tip{
       position: absolute;
       width: 100%;
-      bottom: 10px;
+      top: -20px;
       text-align: center;
       color: #17569F;
     }
   }
   .last-tip{
     text-align: center;
+    font-family: PingFangSC;
   }
   .top {
     margin-bottom: 30px;
