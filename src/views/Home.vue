@@ -118,8 +118,10 @@ export default {
 
   .list {
     padding: 0 20px;
-
+    width: fit-content;
+    margin: 0 auto;
     .item {
+      width: fit-content;
       display: flex;
       align-items: baseline;
       margin-bottom: 8px;

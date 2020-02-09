@@ -1,8 +1,9 @@
 <template>
 <div class='log-view-box'>
   <div class="log-view" id="logView" ref='imageWrapper'>
-    <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='0'>
+    <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='10px' @close="switchClose">
       <img :src="dataURL" alt="" class="canvas-img">
+      <p class="save-img-tip">长按屏幕生成图片</p>
     </el-dialog>
     <div class="top" >
       <p class="title">来自🏠{{formItem.city}} 的{{formItem.name}} </p>
@@ -72,6 +73,7 @@ export default {
   },
   data() {
     return {
+      dialogFormVisible: false,
       dataURL: '',
       formItem: {
         sleepTime: 100,
@@ -96,8 +98,11 @@ export default {
       this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: null }).then((canvas) => {
         const imgUri = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
         this.dataURL = imgUri;
-        this.dialogFormVisible = true;
+        this.switchClose();
       });
+    },
+    switchClose() {
+      this.dialogFormVisible = !this.dialogFormVisible;
     },
   },
 };
@@ -115,13 +120,25 @@ export default {
   color: #fff;
 }
 .log-view {
-  padding: 30px 30px 60px 30px;
+  margin-top: 30px;
+  padding: 0px 30px 60px 30px;
   color: #17569F;
   font-family: PingFangSC-Semibold;
   font-size: 12px;
   text-align: left;
   /deep/.canvas-img{
     width: 100%;
+  }
+  /deep/.el-dialog__body{
+    padding: 0;
+    position: relative;
+    .save-img-tip{
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      text-align: center;
+      color: #17569F;
+    }
   }
   .last-tip{
     text-align: center;
@@ -147,8 +164,10 @@ export default {
     margin-bottom: 30px;
   }
   .list {
-
+    width: fit-content;
+    margin: 0 auto;
     .item {
+      width: fit-content;
       display: flex;
       align-items: baseline;
       margin-bottom:8px;
