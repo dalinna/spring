@@ -1,7 +1,7 @@
 <template>
 <div class='log-view-box'>
   <div class="log-view" id="logView" ref='imageWrapper'>
-    <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='10px' @close="switchClose">
+    <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='10px' >
       <img :src="dataURL" alt="" class="canvas-img">
       <p class="save-img-tip">长按屏幕生成图片</p>
     </el-dialog>
@@ -54,7 +54,7 @@
       <p>战役未止，别放松警惕，我们会胜利！</p>
     </div>
     <div class="btm">
-      <img class="qrcode-img" src="../assets/img/log_view_qrcode.png" alt="">
+      <img class="qrcode-img" src="../assets/img/qrcode1.png" alt="">
     </div>
     <p class="last-tip">- 上述内容为用户自行填写创建，真实性由其本人负责 -</p>
   </div>
