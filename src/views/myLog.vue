@@ -1,5 +1,6 @@
 <template>
   <div class="my-log">
+    <div class="my-log-content">
     <el-form :model="formItem" :rules="rules"
     :inline="true" class="log-form" ref="ruleForm"
     :hide-required-asterisk="true" >
@@ -50,6 +51,7 @@
     <p class="left">- 剩下的
       <span class="bold-span"> {{parseInt(leftTime/60)}} 小时 {{leftTime%60}} 分钟</span>
       ，可能都用来思考和吃吃喝喝了 -</p>
+    </div>
   </div>
 </template>
 
@@ -160,13 +162,14 @@ export default {
 
 <style lang="less" scoped>
 .my-log {
-  padding-top: 80px;
-  position: fixed;
+  padding-top: 60px;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  overflow: scroll;
+  .my-log-content{
+    padding-bottom: 55px;
+  }
   .bold-span{
     font-weight: bold;
   }
