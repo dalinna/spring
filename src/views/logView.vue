@@ -109,6 +109,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.log-view-box{
+  padding-top: 30px;
+}
 .to-img{
   position: fixed;
   bottom: 0;
@@ -120,7 +123,6 @@ export default {
   color: #fff;
 }
 .log-view {
-  margin-top: 30px;
   padding: 0px 30px 60px 30px;
   color: #17569F;
   font-family: PingFangSC-Semibold;
