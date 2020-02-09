@@ -112,7 +112,7 @@ export default {
 .log-view-box{
   padding-bottom: 40px;
   /deep/.canvas-img{
-    width: 60%;
+    width: 75%;
   }
   /deep/.el-dialog__body{
     padding: 0;
