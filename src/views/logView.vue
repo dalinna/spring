@@ -4,7 +4,7 @@
     <div class="top" >
       <p class="title"></p>
       <p class="title">来自🏠{{formItem.city}} 的👤 {{formItem.name}} </p>
-      <p class="title">这个春节假期的时间分配如下：</p>
+      <p class="title btm-title" >这个春节假期的时间分配如下：</p>
     </div>
     <div class="list">
       <div class="item">
@@ -151,6 +151,9 @@ export default {
     .title{
       text-align: center;
       height: 25px;
+    }
+    .btm-title{
+      margin-top: 10px;
     }
   }
 
