@@ -7,7 +7,7 @@
     </el-dialog>
     <div class="top" >
       <p class="title">来自🏠{{formItem.city}} 的👤 {{formItem.name}} </p>
-      <p class="title">假期的时间分配</p>
+      <p class="title">这个春节假期的时间分配如下：</p>
     </div>
     <div class="list">
       <div class="item">
@@ -123,7 +123,7 @@ export default {
   color: #fff;
 }
 .log-view {
-  padding: 10px 30px 60px 30px;
+  padding: 20px 30px 60px 30px;
   color: #17569F;
   font-family: PingFangSC-Semibold;
   font-size: 12px;
