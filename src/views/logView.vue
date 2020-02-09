@@ -118,12 +118,14 @@ export default {
   /deep/.el-dialog__body{
     padding: 0;
     position: relative;
+    font-size: 0;
     .save-img-tip{
       position: absolute;
       width: 100%;
       top: -20px;
       text-align: center;
       color: #FF5F7A;
+      font-size: 12px;
     }
   }
 }
