@@ -55,7 +55,7 @@
     </div>
     <p class="last-tip">- 上述内容为用户自行填写创建，真实性由其本人负责 -</p>
   </div>
-  <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='10px' >
+  <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='5px' >
     <img :src="dataURL" alt="" class="canvas-img">
     <p class="save-img-tip">长按屏幕保存图片</p>
   </el-dialog>
@@ -112,7 +112,7 @@ export default {
 <style lang="less" scoped>
 .log-view-box{
   /deep/.canvas-img{
-    width: 100%;
+    width: 90%;
   }
   /deep/.el-dialog__body{
     padding: 0;
@@ -218,7 +218,7 @@ export default {
     color: #17569F;
     p:last-of-type{
       font-weight: bold;
-      margin-top: 5px;
+      margin-top: 10px;
     }
   }
 }
