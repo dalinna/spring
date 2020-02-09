@@ -3,10 +3,10 @@
   <div class="log-view" id="logView" ref='imageWrapper'>
     <el-dialog  :visible.sync="dialogFormVisible" width="90%" top='10px' >
       <img :src="dataURL" alt="" class="canvas-img">
-      <p class="save-img-tip">长按屏幕生成图片</p>
+      <p class="save-img-tip">长按屏幕保存图片</p>
     </el-dialog>
     <div class="top" >
-      <p class="title">来自🏠{{formItem.city}} 的{{formItem.name}} </p>
+      <p class="title">来自🏠{{formItem.city}} 的👤 {{formItem.name}} </p>
       <p class="title">假期的时间分配</p>
     </div>
     <div class="list">
@@ -58,7 +58,7 @@
     </div>
     <p class="last-tip">- 上述内容为用户自行填写创建，真实性由其本人负责 -</p>
   </div>
-<div @click="toImg" class="to-img">生成图片</div>
+<div @click="toImg" class="to-img">保存图片</div>
 </div>
 </template>
 
@@ -123,7 +123,7 @@ export default {
   color: #fff;
 }
 .log-view {
-  padding: 0px 30px 60px 30px;
+  padding: 10px 30px 60px 30px;
   color: #17569F;
   font-family: PingFangSC-Semibold;
   font-size: 12px;
@@ -139,7 +139,7 @@ export default {
       width: 100%;
       top: -20px;
       text-align: center;
-      color: #17569F;
+      color: #FF5F7A;
     }
   }
   .last-tip{
