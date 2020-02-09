@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Mint from 'mint-ui';
 import Axios from 'axios';
+import html2canvas from 'html2canvas';
 import 'mint-ui/lib/style.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -13,6 +14,8 @@ Vue.config.productionTip = false;
 Vue.use(Mint);
 Vue.use(ElementUI);
 Vue.prototype.$http = Axios;
+Vue.prototype.$html2canvas = html2canvas;
+
 // 根据路由设置标题
 router.beforeEach((to, from, next) => {
   console.log(to.meta.title);

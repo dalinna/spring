@@ -1,6 +1,8 @@
 <template>
-  <div class="log-view">
-    <div class="top">
+<div class='log-view-box'>
+  <div class="log-view" id="logView" ref='imageWrapper'>
+    <img src='dataURL'/>
+    <div class="top" >
       <p class="title">来自🏠{{formItem.city}} 的{{formItem.name}} </p>
       <p class="title">假期的时间分配</p>
     </div>
@@ -53,6 +55,8 @@
     </div>
     <p class="last-tip">- 上述内容为用户自行填写创建，真实性由其本人负责 -</p>
   </div>
+<div @click="toImg">生成图片</div>
+</div>
 </template>
 
 <script>
@@ -66,6 +70,7 @@ export default {
   },
   data() {
     return {
+      dataURL: '',
       formItem: {
         sleepTime: 100,
         phoneTime: 90,
@@ -84,6 +89,14 @@ export default {
     getData() {
       const localStorageData = JSON.parse(localStorage.getItem('myLog'));
       this.formItem = Object.assign({}, this.formItem, localStorageData);
+    },
+    toImg() {
+      this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: null }).then((canvas) => {
+        const imgUri = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
+        const saveLink = document.createElement('a');
+        saveLink.href = imgUri;
+        saveLink.download = saveLink.click();
+      });
     },
   },
 };
