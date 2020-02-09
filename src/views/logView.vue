@@ -95,7 +95,7 @@ export default {
       this.formItem = Object.assign({}, this.formItem, localStorageData);
     },
     toImg() {
-      this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: '#fff' }).then((canvas) => {
+      this.$html2canvas(this.$refs.imageWrapper, { backgroundColor: '#fff', height: document.getElementById('logView').clientHeight + 20 }).then((canvas) => {
         const imgUri = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
         this.dataURL = imgUri;
         this.switchClose();
@@ -139,7 +139,7 @@ export default {
   color: #fff;
 }
 .log-view {
-  padding: 0px 30px 20px 30px;
+  padding: 10px 30px 20px 30px;
   color: #17569F;
   font-family: PingFangSC-Semibold;
   font-size: 12px;
